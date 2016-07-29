@@ -17,6 +17,12 @@ angular.module('angulartestApp', ["angularUtils.directives.dirPagination"])
         $scope.titles = Object.keys(res.data.tabletitles);
         $scope.update = function() {
           $scope.treasure = res.data.tabletitles[$scope.selectedTitle.toString()];
+          $scope.randomResult = function(){
+            var randomTreasure = $scope.treasure[Math.floor(Math.random() * $scope.treasure.length)];
+            $scope.rName = randomTreasure.Name;
+            $scope.rType = randomTreasure.Type;
+            $scope.rDescription = randomTreasure.Description;
+          };
         };
       });
 
