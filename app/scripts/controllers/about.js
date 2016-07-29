@@ -7,9 +7,22 @@
  * # AboutCtrl
  * Controller of the angulartestApp
  */
-angular.module('angulartestApp', ['angularUtils.directives.dirPagination'])
+angular.module('angulartestApp', ["angularUtils.directives.dirPagination"])
   .controller('AboutCtrl', function ($scope, $http) {
-    $http.get('data/treasure.json')
+
+    $http.get('data/all.json')
+      .then(function(res){
+        $scope.selectedTitle = null;
+        $scope.searchResults = '';
+        $scope.titles = Object.keys(res.data.tabletitles);
+        $scope.update = function() {
+          $scope.treasure = res.data.tabletitles[$scope.selectedTitle.toString()];
+        };
+      });
+
+
+  /*
+    $http.get('data/all.json')
       .then(function(res){
         $scope.searchResults = '';
         $scope.treasure = res.data;
@@ -33,7 +46,8 @@ angular.module('angulartestApp', ['angularUtils.directives.dirPagination'])
       $scope.sortKey = keyname; // set the sortKey to the param passed
       $scope.reverse = !$scope.reverse //if true make it false and vice versa
     }
-
+  
+  */
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

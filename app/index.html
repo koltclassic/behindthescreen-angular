@@ -15,17 +15,12 @@
     <!-- endbuild -->
   </head>
   <body ng-controller="AboutCtrl" class="col-md-8 col-md-offset-2">
-
     <form class="form-inline">
       <div class="form-group">
         <div class="input-group">
           <div class="input-group-btn">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Another action</a></li>
-            </ul>
+            <select ng-model="selectedTitle" ng-options="title for title in titles" ng-change="update()">
+            </select>
           </div>
           <input type="text" class="form-control" placeholder="Search list..." ng-model="searchResults" style="width: 600px;">
         </div>
@@ -131,6 +126,7 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
+  
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->

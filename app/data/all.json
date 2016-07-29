@@ -1,5 +1,6 @@
 {
-"dungeons":[
+"tabletitles": {
+"dungeon":[
  {
    "Name": "Hole in the Hills",
    "Type": "Abandoned mine",
@@ -7957,5 +7958,5 @@
    "Description": "Gauul, known to any who pass through the belt of fens south of Fort Gloomheart, is a giant fetid frog with a taste for wealth. His breath is so acerbic that being within 30 feet of one of Gauul's infamously nauseating belches will cause acid blisters and melt away flesh. He has a close-knit gang of troglodyte flunkies who collect for him seekers of highly appraised artifacts claiming to have them for sale. They are then liberated of their gold and fed into Gauul's giant gullet where he consumes them gleefully."
  }
 ]
-
+}
 }
