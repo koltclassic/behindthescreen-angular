@@ -38,4 +38,7 @@
     "grunt": "^0.4.5",
     "grunt-cli": "^1.2.0"
   }
+  "scripts": {
+    "start": "node app.js"
+  }
 }
