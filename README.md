@@ -1,7 +1,6 @@
-# angulartest
+# DnD Behind the Screen 10k
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
+This project is a partial AngularJS rewrite of [AnEmortalKid's DnD 10k site](anemortalkid.github.io).
 
 ## Build & development
 
