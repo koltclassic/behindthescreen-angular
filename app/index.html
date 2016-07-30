@@ -17,13 +17,19 @@
   <body ng-controller="AboutCtrl" class="col-md-12">
   <!--[if lte IE 8]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+  <![endif]--> 
+  <div class="header">
+    <h2>DnD Behind the Screen 10k</h2>
+    <h4>Based on the work of <a href="https://anemortalkid.github.io/">AnEmortalKid</a></h4>
+  </div>
+
   <div class="row" style="padding-top: 10px;">
     <div class="col-md-2 col-md-offset-1">
     <form>
       <div class="form-group">
           <div class="input-group-btn">
             <select class="form-control" ng-model="selectedTitle" ng-options="title for title in titles" ng-change="update()">
+              <option value="" selected disabled>Select an option...</option>
             </select>
           </div>
         <div class="form-group" style="padding-top: 10px;">
@@ -63,7 +69,7 @@
           </th>
         </tr>
       </thead>
-      <tr dir-paginate="t in treasure | orderBy:sortKey:reverse | filter:searchResults | itemsPerPage:20 ">
+      <tr dir-paginate="t in treasure | orderBy:sortKey:reverse | filter:searchResults | itemsPerPage:10 ">
         <td class="col-md-3">
           {{t.Name}}
         </td>

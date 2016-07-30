@@ -26,6 +26,10 @@ angular.module('angulartestApp', ["angularUtils.directives.dirPagination"])
         };
       });
 
+    $scope.sort = function(keyname){
+      $scope.sortKey = keyname; // set the sortKey to the param passed
+      $scope.reverse = !$scope.reverse //if true make it false and vice versa
+    }
 
   /*
     $http.get('data/all.json')
@@ -48,10 +52,7 @@ angular.module('angulartestApp', ["angularUtils.directives.dirPagination"])
         return Math.ceil($scope.data.length/$scope.pageSize);                
     }
 
-    $scope.sort = function(keyname){
-      $scope.sortKey = keyname; // set the sortKey to the param passed
-      $scope.reverse = !$scope.reverse //if true make it false and vice versa
-    }
+ 
   
   */
     this.awesomeThings = [
