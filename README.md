@@ -1,6 +1,6 @@
 # DnD Behind the Screen 10k
 
-This project is a partial AngularJS rewrite of [AnEmortalKid's DnD 10k site](anemortalkid.github.io).
+This project is a partial AngularJS rewrite of [AnEmortalKid's DnD 10k site](https://anemortalkid.github.io).
 
 ## Build & development
 
